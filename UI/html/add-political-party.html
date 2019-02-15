@@ -26,14 +26,19 @@
 			<h1>Add political party</h1>
 		</div>
 	</div>
-	<form method="" action="political-party.html" class="form-class">
-		<input type="text" class="input-form" placeholder="Political Party name">
-		<input type="text" class="input-form" placeholder="Headquarter address">
-		<input type="text" class="input-form" placeholder="Logo URL">
-		<button href="#" class="button-blue left input-form">Submit</button>
-	</form>
+	<div class="form-class">
+		<div class="alert" id="alert">
+			<span onclick="this.parentElement.style.display='none';">&times;</span>
+			<strong>Oops!</strong> There are miising information.
+		</div>
+		<input type="text" id="partyname" class="input-form" placeholder="Political Party name">
+		<input type="text" id="address" class="input-form" placeholder="Headquarter address">
+		<input type="text" id="logourl" class="input-form" placeholder="Logo URL">
+		<button href="#" onclick="return validateParty()" class="button-blue left input-form">Submit</button>
+	</div>
 	<div class="footer">
 		<span>&copy; Copyright 2019 Eric Nyirimana</span>
 	</div>
 </body>
+<script src="../js/validation.js"></script>
 </html>

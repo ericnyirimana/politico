@@ -26,18 +26,23 @@
 			<h1>Add political office</h1>
 		</div>
 	</div>
-	<form method="" action="political-party.html" class="form-class">
-		<input type="text" class="input-form" placeholder="Political office name">
-		<select class="input-form">
-			<option>---- Select Type ----</option>
+	<div class="form-class">
+			<div class="alert" id="alert">
+					<span onclick="this.parentElement.style.display='none';">&times;</span>
+					<strong>Oops!</strong> There are miising information.
+				</div>
+		<input type="text" id="office" class="input-form" placeholder="Political office name">
+		<select class="input-form" id="office_type">
+			<option value="">---- Select Type ----</option>
 			<option>federal</option>
 			<option>legislative</option>
 			<option>state</option>
 		</select>
-		<button href="#" class="button-blue left input-form">Submit</button>
-	</form>
+		<button href="#" onclick="return validateOffice()" class="button-blue left input-form">Submit</button>
+	</div>
 	<div class="footer">
 		<span>&copy; Copyright 2019 Eric Nyirimana</span>
 	</div>
 </body>
+<script src="../js/validation.js"></script>
 </html>
